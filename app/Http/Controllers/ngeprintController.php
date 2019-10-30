@@ -70,28 +70,28 @@ class ngeprintController extends Controller
     $cetak=ngeprint::where('id',$id)->first();
 
     $cetak->update([
-        'status'=>'proses'
+        'status'=>'diproses'
     ]);
     return redirect('/daftar-cetak');
     }
 
     public function ditolak($id){
+    $cetak=ngeprint::where('id',$id)->first();
+
+    $cetak->update([
+        'status'=>'ditolak'
+    ]);
+    return redirect('/daftar-cetak');
+    }
+
+    public function selesai($id){
         $cetak=ngeprint::where('id',$id)->first();
     
         $cetak->update([
-            'status'=>'ditolak'
+            'status'=>'selesai'
         ]);
         return redirect('/daftar-cetak');
-        }
-
-        public function selesai($id){
-            $cetak=ngeprint::where('id',$id)->first();
-        
-            $cetak->update([
-                'status'=>'selesai'
-            ]);
-            return redirect('/daftar-cetak');
-            }
+    }
     /**
      * Display the specified resource.
      *

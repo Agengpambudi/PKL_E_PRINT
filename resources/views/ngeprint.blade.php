@@ -78,7 +78,7 @@ background-color: transparent; margin-bottom: -5px;
     </span>
 @enderror
       </div>
-      <button type="submit" class="btn btn-success">Success</button>
+      <button type="submit" class="btn btn-success">Upload</button>
     </div>
   
   </form>
